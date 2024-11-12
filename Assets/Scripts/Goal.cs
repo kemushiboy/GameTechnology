@@ -8,6 +8,8 @@ public class Goal : MonoBehaviour
 
     public ScoreCount scoreCount;
 
+    public AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,8 @@ public class Goal : MonoBehaviour
             Destroy(gameObject);
         
             scoreCount.CountUp();
+
+            audioSource.Play();
         }
 
 
